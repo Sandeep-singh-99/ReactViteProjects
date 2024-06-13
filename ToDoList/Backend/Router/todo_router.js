@@ -6,9 +6,9 @@ router.route("/").get(todoController.home)
 
 router.route("/getToDoList").get(todoController.getToDoList)
 
-router.route("/addToDoList").get(todoController.addToDoList)
+router.route("/addToDoList").post(todoController.addToDoList)
 
-router.route("/updateToDoList").post(todoController.updateToDoList)
+router.route("/updateToDoList").put(todoController.updateToDoList)
 
 router.route("/deleteToDoList").delete(todoController.deleteToDoList)
 

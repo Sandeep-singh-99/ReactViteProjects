@@ -1,44 +1,58 @@
-const ToDoModel = require("../Model/todo-model")
+const ToDoModel = require("../Model/todo-model");
 
 const home = async (req, res) => {
     try {
-        res.json("Welcome to home page")
+        res.json("Welcome to the home page");
     } catch (error) {
-        res.json("Internal server error")
+        res.status(500).json("Internal server error");
     }
-}
+};
 
 const addToDoList = async (req, res) => {
-    ToDoModel.create({
-        task: req.body.task,
-        status: req.body.status,
-        deadline: req.body.deadline,
-    })
-    .then((todo) => res.json(todo))
-    .catch((err) => res.json(err))
-}
+    try {
+        const todo = await ToDoModel.create({
+            task: req.body.task,
+            status: req.body.status,
+            deadline: req.body.deadline,
+        });
+        res.json(todo);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+};
 
 const getToDoList = async (req, res) => {
-    ToDoModel.find({})
-    .then((todolist) => res.json(todolist))
-    .catch((err) => res.json(err))
-}
+    try {
+        const todolist = await ToDoModel.find({});
+        res.json(todolist);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+};
 
 const updateToDoList = async (req, res) => {
-   const updateData = {
-    task: req.body.task,
-    status: req.body.status,
-    deadline: req.body.deadline,
-   };
-   ToDoModel.findByIdAndUpdate(updateData)
-   .then((todo) => res.json(todo))
-   .catch((err) => res.json(err))
-}
+    try {
+        const { id } = req.params;
+        const updateData = {
+            task: req.body.task,
+            status: req.body.status,
+            deadline: req.body.deadline,
+        };
+        const todo = await ToDoModel.findByIdAndUpdate(id, updateData, { new: true });
+        res.json(todo);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+};
 
 const deleteToDoList = async (req, res) => {
-    ToDoModel.findByIdAndUpdate()
-    .then((todo) => res.json(todo))
-    .catch((err) => res.json(err))
-}
+    try {
+        const { id } = req.params;
+        const todo = await ToDoModel.findByIdAndDelete(id);
+        res.json(todo);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+};
 
-module.exports = {home ,addToDoList, getToDoList, updateToDoList, deleteToDoList}
+module.exports = { home, addToDoList, getToDoList, updateToDoList, deleteToDoList };
