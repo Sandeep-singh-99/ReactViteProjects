@@ -36,6 +36,10 @@ export default function ToDo() {
             </form>
         </div>
     </div>
+
+    <div className='relative'>
+        <button className='absolute bottom-0 end-0 m-2 bg-green-500 px-3 py-1 rounded-md text-white'>Next Page</button>
+    </div>
     </>
   )
 }
