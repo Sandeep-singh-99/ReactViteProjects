@@ -15,19 +15,19 @@ export default function ToDo() {
                 {/* Task Feild */}
                 <div className='mb-5'>
                     <label className='block mb-3 text-base font-medium'>Task</label>
-                    <input type='text' id='text' name='text' placeholder='Enter your task' className='w-full rounded-md shadow-lg border border-[#e0e0e0] px-3 py-3 outline-none text-base font-medium'/>
+                    <input type='text' id='text' name='text' placeholder='Enter your task' className='w-full text-blue-600 rounded-md shadow-lg border border-[#e0e0e0] px-3 py-3 outline-none text-base font-medium'/>
                 </div>
 
                 {/* Status Feild*/}
                 <div className='mb-5'>
                     <label className='block mb-3 text-base font-medium'>Status</label>
-                    <input type='text' id='text' name='text' placeholder='Enter your status' className='w-full rounded-md shadow-lg border border-[#e0e0e0] px-3 py-3 outline-none text-base font-medium'/>
+                    <input type='text' id='text' name='text' placeholder='Enter your status' className='w-full text-blue-600 rounded-md shadow-lg border border-[#e0e0e0] px-3 py-3 outline-none text-base font-medium'/>
                 </div>
 
                 {/* Deadline */}
                 <div className='mb-5'>
                     <label className='block mb-3 text-base font-medium'>Deadline</label>
-                    <input type='date' id='date' name='date' className='w-full rounded-md shadow-lg border border-[#e0e0e0] px-3 py-3 outline-none text-base font-medium'/>
+                    <input type='date' id='date' name='date' className='w-full text-blue-600 rounded-md shadow-lg border border-[#e0e0e0] px-3 py-3 outline-none text-base font-medium'/>
                 </div>
 
                 <div>
