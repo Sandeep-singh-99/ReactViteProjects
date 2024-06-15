@@ -8,8 +8,8 @@ router.route("/getnote").get(noteController.getnote)
 
 router.route("/addnote").post(noteController.addnote)
 
-router.route("/updatenote").put(noteController.updatenote)
+router.route("/updatenote/:id").put(noteController.updatenote)
 
-router.route("/deletenote").delete(noteController.deletenote)
+router.route("/deletenote/:id").delete(noteController.deletenote)
 
 module.exports = router
