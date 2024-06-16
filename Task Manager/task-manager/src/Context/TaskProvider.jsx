@@ -1,51 +1,48 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { createContext } from 'react'
-import axios from 'axios'
+import React, { useContext, useEffect, useState } from 'react';
+import { createContext } from 'react';
+import axios from 'axios';
 
-const TaskContext = createContext()
+const TaskContext = createContext();
 
-const apiURL = "http://localhost:5000/api/task"
+const apiURL = "http://localhost:5000/api/task";
 
 export const useTaskContext = () => {
-    return useContext(TaskContext)
+    return useContext(TaskContext);
 }
 
-export default function TaskProvider({children}) {
-    const [tasks, setTasks] = useState([])
-    const [filiteredTasks, setFiliteredTasks] = useState([])
-    const [totalTasks, setTotalTasks] = useState(0)
-    const [completedTasks, setCompletedTasks] = useState(0)
-    const [todoTasks, setTodoTasks] = useState(0)
+export default function TaskProvider({ children }) {
+    const [tasks, setTasks] = useState([]);
+    const [filteredTasks, setFilteredTasks] = useState([]);
+    const [totalTasks, setTotalTasks] = useState(0);
+    const [completedTasks, setCompletedTasks] = useState(0);
+    const [todoTasks, setTodoTasks] = useState(0);
 
     useEffect(() => {
-        fetchData()
-    }, [totalTasks])
-
+        fetchData();
+    }, [totalTasks]);
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`${apiURL}/tasks`)
-            setTasks(response.data)
-            setFiliteredTasks(response.data)
-            setTotalTasks(response.data.length)
-            const completedCount = response.data.filter(
-                (task) => task.status === 'Completed' 
-            ).length;
-            setCompletedTasks(completedCount)
-            setTodoTasks(response.data.length - completedCount)
+            const response = await axios.get(`${apiURL}/tasks`);
+            setTasks(response.data);
+            setFilteredTasks(response.data);
+            setTotalTasks(response.data.length);
+            const completedCount = response.data.filter(task => task.status === 'Completed').length;
+            setCompletedTasks(completedCount);
+            setTodoTasks(response.data.length - completedCount);
         } catch (error) {
             console.error("Error fetching data:", error);
         }
-    }
+    };
 
     const handleFilterClick = (status) => {
         if (status === 'all') {
-            setFiliteredTasks(tasks)
+            setFilteredTasks(tasks);
         } else {
-            const filtered = tasks.filter((task) => task.status === status)
-            setFiliteredTasks(filtered)
+            const filtered = tasks.filter(task => task.status === status);
+            setFilteredTasks(filtered);
         }
-    }
+    };
 
     const addTask = async (title, description, status) => {
         try {
@@ -54,35 +51,36 @@ export default function TaskProvider({children}) {
                 description,
                 status,
             });
-            setTasks([...tasks, response.data])
+            const newTask = response.data;
+            setTasks(prevTasks => [...prevTasks, newTask]);
+            setFilteredTasks(prevTasks => [...prevTasks, newTask]);
+            setTotalTasks(prevTotal => prevTotal + 1);
+
             if (status === 'Completed') {
-                setCompletedTasks((prev) => prev + 1)
+                setCompletedTasks(prevCompleted => prevCompleted + 1);
             } else {
-                setTodoTasks((prev) => prev + 1)
+                setTodoTasks(prevTodo => prevTodo + 1);
             }
-            setTotalTasks((prev) => prev + 1)
         } catch (error) {
-            console.error("Error adding tasks:", error);
+            console.error("Error adding task:", error);
         }
-    }
+    };
 
     const deleteTask = async (taskId) => {
         try {
-            await axios.delete(`${apiURL}/tasks/${taskId}`)
-            const updatedTasks = tasks.filter((task) => task.id !== taskId)
-            setTasks(updatedTasks)
-            setFiliteredTasks(updatedTasks)
-            setTotalTasks((prev) => prev - 1)
+            await axios.delete(`${apiURL}/tasks/${taskId}`);
+            const updatedTasks = tasks.filter(task => task._id !== taskId);
+            setTasks(updatedTasks);
+            setFilteredTasks(updatedTasks);
+            setTotalTasks(updatedTasks.length);
 
-            const completedCount = updatedTasks.filter(
-                (task) => task.status === "Completed"
-            ).length;
-            setCompletedTasks(completedCount)
-            setTotalTasks(updatedTasks.length - completedCount)
+            const completedCount = updatedTasks.filter(task => task.status === 'Completed').length;
+            setCompletedTasks(completedCount);
+            setTodoTasks(updatedTasks.length - completedCount);
         } catch (error) {
             console.error("Error deleting task:", error);
         }
-    }
+    };
 
     const editTask = async (taskId, updatedTitle, updatedDescription, updatedStatus) => {
         try {
@@ -91,46 +89,43 @@ export default function TaskProvider({children}) {
                 description: updatedDescription,
                 status: updatedStatus
             });
-            fetchData()
+            fetchData();
         } catch (error) {
-            console.error("Error editing tasks: ", error);
+            console.error("Error editing task:", error);
         }
-    }
+    };
 
-    const updatedTaskStatus = async (taskId, status) => {
+    const updateTaskStatus = async (taskId, status) => {
         try {
-            await  axios.put(`${apiURL}/tasks/${taskId}`, {status})
-            const updatedTasks = tasks.map((task) => task._id === taskId ? {...task, status} : task)
+            await axios.put(`${apiURL}/tasks/${taskId}`, { status });
+            const updatedTasks = tasks.map(task => task._id === taskId ? { ...task, status } : task);
 
-            setTasks(updatedTasks)
-            setFiliteredTasks(updatedTasks)
-           
-            const completedCount = updatedTasks.filter(
-                (task) => task.status === "Completed"
-            ).length;
+            setTasks(updatedTasks);
+            setFilteredTasks(updatedTasks);
 
-            setCompletedTasks(completedCount)
-            setTodoTasks(updatedTasks.length - completedCount)
+            const completedCount = updatedTasks.filter(task => task.status === 'Completed').length;
+            setCompletedTasks(completedCount);
+            setTodoTasks(updatedTasks.length - completedCount);
         } catch (error) {
             console.error("Error updating task status:", error);
         }
-    }
+    };
 
-  return (
-    <TaskContext.Provider
-    value={{
-        filiteredTasks,
-        totalTasks,
-        completedTasks,
-        todoTasks,
-        handleFilterClick,
-        addTask,
-        deleteTask,
-        editTask,
-        updatedTaskStatus
-    }}
-    >
-        {children}
-    </TaskContext.Provider>
-  )
+    return (
+        <TaskContext.Provider
+            value={{
+                filteredTasks,
+                totalTasks,
+                completedTasks,
+                todoTasks,
+                handleFilterClick,
+                addTask,
+                deleteTask,
+                editTask,
+                updateTaskStatus
+            }}
+        >
+            {children}
+        </TaskContext.Provider>
+    );
 }
