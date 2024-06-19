@@ -1,13 +1,17 @@
-import {BrowserRouter, Route, Routes, Router} from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
   const isLinkActive = (path) => window.location.pathname === path
   return (
     <>
     <BrowserRouter>
-    <Routes>
-
-    </Routes>
+    <div className='w-screen bg-[#f3eee5] h-screen'>
+      <div className='mx-6'>
+        <div className=''>
+          <h1 className='text-green-600 text-2xl font-bold'>Hospital Managment App</h1>
+        </div>
+      </div>
+    </div>
     </BrowserRouter>
     </>
   )
