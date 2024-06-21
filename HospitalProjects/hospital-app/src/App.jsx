@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <div className='bg-[#f3eee5]  h-full'>
+    <div className='bg-[#f3eee5]  max-h-fit'>
       <div className='p-5'>
         <div className='mb-8'>
           <h1 className='text-green-600 text-4xl font-bold'>Hospital Managment App</h1>
