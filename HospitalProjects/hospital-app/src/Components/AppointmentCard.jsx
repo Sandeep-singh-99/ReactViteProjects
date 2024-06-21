@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AppointmentCard({appointment, onEdit, onDelete}) {
+export default function AppointmentCard({appointment, onEdit, onDelete})  {
   return (
     <div className='bg-white rounded-md shadow-md'>
         <div className='mt-10 w-[300px] p-5'>
