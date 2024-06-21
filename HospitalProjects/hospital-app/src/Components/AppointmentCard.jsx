@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function AppointmentCard({appointment, onEdit, onDelete}) {
   return (
-    <div>
-        <div>
+    <div className='bg-white rounded-md shadow-md'>
+        <div className='mt-10 w-[300px] p-5'>
             <p>
                 <span>
-                    Patient:
+                    Patient: 
                 </span>
                 {appointment.patientName}
             </p>
@@ -18,19 +18,17 @@ export default function AppointmentCard({appointment, onEdit, onDelete}) {
                 {appointment.doctorName}
             </p>
 
-            <p>
+            <p className=''>
                 <span>
-                    Date:
+                    Date: 
                 </span>
                 {new Date(appointment.date).toLocaleDateString()}
             </p>
 
-            <div>
-                <button>
-                    <button onClick={() => onEdit(appointment)}>Edit</button>
-                </button>
+            <div className='flex justify-between mt-5'>
+                <button className='bg-blue-400 text-white px-2 rounded-md' onClick={() => onEdit(appointment)}>Edit</button>
 
-                <button onClick={() => onDelete(appointment._id)}>
+                <button className='bg-blue-400 text-white px-2 rounded-md' onClick={() => onDelete(appointment._id)}>
                     Delete
                 </button>
             </div>
