@@ -43,7 +43,7 @@ export default function Appointments() {
   const handleUpdateAppointment = (id, e) => {
     e.preventDefault()
 
-    axios.post(`http://localhost:5000/appointment/update/${id}`, selectAppointment)
+    axios.put(`http://localhost:5000/appointment/update/${id}`, selectAppointment)
     .then(response => {
       console.log(response.data);
 
@@ -84,7 +84,7 @@ export default function Appointments() {
   }
 
   return (
-    <div className='flex m-5 justify-between'>
+    <div className='flex m-5 justify-between overflow-y-auto'>
       <div className=''>
           <h4 className='mb-10 px-20 font-semibold'>
             {
@@ -168,8 +168,8 @@ export default function Appointments() {
        </div>
       </div>
 
-      <div>
-          <h3>
+      <div className='pr-20'>
+          <h3 className='pl-20'>
             Appointments
             ({
               appointments.length

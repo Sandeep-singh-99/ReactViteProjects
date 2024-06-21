@@ -4,22 +4,22 @@ export default function AppointmentCard({appointment, onEdit, onDelete}) {
   return (
     <div className='bg-white rounded-md shadow-md'>
         <div className='mt-10 w-[300px] p-5'>
-            <p>
-                <span>
+            <p className='text-blue-500'>
+                <span className='mr-2 text-black'>
                     Patient: 
                 </span>
                 {appointment.patientName}
             </p>
 
-            <p>
-                <span>
+            <p className='text-blue-500'>
+                <span className='mr-2 text-black'>
                     Doctor:
                 </span>
                 {appointment.doctorName}
             </p>
 
-            <p className=''>
-                <span>
+            <p className='text-blue-500'>
+                <span className='mr-2 text-black'>
                     Date: 
                 </span>
                 {new Date(appointment.date).toLocaleDateString()}
