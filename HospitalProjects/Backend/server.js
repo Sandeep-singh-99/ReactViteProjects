@@ -12,7 +12,7 @@ app.use(cors())
 
 app.use("/doctors", doctorRouter)
 app.use("/appointment", appointmentRouter)
-app.use("/patient", patientRouter)
+app.use("/patients", patientRouter)
 
 
 ConnectDB().then(() => {
