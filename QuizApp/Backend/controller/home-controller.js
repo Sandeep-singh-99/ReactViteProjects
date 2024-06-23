@@ -6,4 +6,4 @@ const home = async (req, res) => {
     }
 }
 
-module.exports = home
+module.exports = {home}
