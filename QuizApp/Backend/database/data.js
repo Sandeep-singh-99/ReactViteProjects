@@ -1,4 +1,4 @@
-export default [
+const questions = [
     {
         id: 1,
         question: "Javascript is an ________ language",
@@ -6,9 +6,9 @@ export default [
             'Object-Oriented',
             'Object-Based',
             'Procedural'
-        ]
+        ],
+        answer: 0 // Correct answer index
     },
-
     {
         id: 2,
         question: "Following methods can be used to display in some form using javascript",
@@ -16,9 +16,9 @@ export default [
             'document.write()',
             'console.log()',
             'window.alert()'
-        ]
+        ],
+        answer: 1
     },
-
     {
         id: 3,
         question: "When an operator value is NULL, the typeof returned by the unary operator is:",
@@ -26,9 +26,9 @@ export default [
             'Boolean',
             'Undefined',
             'Object'
-        ]
+        ],
+        answer: 2
     },
-
     {
         id: 4,
         question: "What does the toString() method return?",
@@ -36,9 +36,9 @@ export default [
             'Return Object',
             'Return String',
             'Return Integer'
-        ]
+        ],
+        answer: 1
     },
-
     {
         id: 5,
         question: "Which function is used to serialize an object into a JSON string?",
@@ -46,8 +46,9 @@ export default [
             'stringify()',
             'parse()',
             'convert()'
-        ]
+        ],
+        answer: 0
     }
 ];
 
-export const answer = [0,1,2,1,0]
+export default questions;
