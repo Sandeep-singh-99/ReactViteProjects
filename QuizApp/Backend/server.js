@@ -11,6 +11,13 @@ app.use(express.json()) // middleware
 app.use(cors())
 app.use(morgan('tiny'))
 
+app.get("/", (req, res) => {
+    try {
+        res.json('Welcome to home Page')
+    } catch (error) {
+        res.json(error)
+    }
+})
 
 app.use("/api/quiz", questionRouter)
 app.use("/api/quiz", resultRouter)
