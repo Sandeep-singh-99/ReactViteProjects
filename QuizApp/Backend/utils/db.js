@@ -11,3 +11,5 @@ const ConnectDB = async () => {
         process.exit(0)
     }
 }
+
+module.exports = ConnectDB
