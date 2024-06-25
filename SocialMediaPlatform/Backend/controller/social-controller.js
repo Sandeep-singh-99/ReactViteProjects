@@ -1,3 +1,14 @@
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, 'uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
+    }
+})
+
+const upload = multer({storage: storage})
+
 const Post = require("../models/post-model")
 
 // Get all Posts
@@ -71,4 +82,4 @@ const commentPost = async (req, res) => {
     }
 }
 
-module.exports = {getAllPost, createPost, likePost, commentPost}
+module.exports = {getAllPost, createPost, likePost, commentPost, upload}

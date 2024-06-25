@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const postController = require('../controller/social-controller')
 
+
 router.route('/').get(postController.getAllPost)
 
 router.route('/').post(postController.upload.single('file'), postController.createPost)
