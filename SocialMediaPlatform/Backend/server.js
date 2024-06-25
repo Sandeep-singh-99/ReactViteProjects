@@ -3,7 +3,6 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const path = require('path')
-const multer = require('multer')
 const ConnectDB = require('./utils/db')
 const postRouter = require('./router/social-router')
 
