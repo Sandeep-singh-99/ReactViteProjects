@@ -1,3 +1,3 @@
-javasript'''
+javascript'''
 Hash Password
 '''
