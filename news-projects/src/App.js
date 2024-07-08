@@ -1,24 +1,15 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import TranslateBox from './Components/TranslateBox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className='bg-slate-950 h-screen'>
+     <div className='flex flex-col justify-center items-center pt-10'>
+    <h1 className='text-[40px] mb-10 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-500'>Google Translate</h1>
+    <TranslateBox/>
+   </div>
+  </div>
   );
 }
 
