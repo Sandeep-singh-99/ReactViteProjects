@@ -6,6 +6,7 @@ import Services from "./components/Services";
 
 import "./styles/App.scss";
 import "./styles/Header.scss";
+import "./styles/MediaQuery.scss"
 
 
 function App() {
