@@ -1,14 +1,21 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
-import './styles/App.scss'
-import './styles/Header.scss'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Services from "./components/Services";
+
+import "./styles/App.scss";
+import "./styles/Header.scss";
+
 
 function App() {
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Routes>
-        <Route></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </BrowserRouter>
   );
