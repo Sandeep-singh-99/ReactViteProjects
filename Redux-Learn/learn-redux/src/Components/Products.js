@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../redux/cartSlice';
 import { fetchProducts } from '../redux/ProductSlice';
 import { STATUSES } from '../redux/ProductSlice';
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Products = () => {
     const dispatch = useDispatch();
@@ -22,6 +24,7 @@ const Products = () => {
 
     const handleAdd = (product) => {
         dispatch(add(product));
+        toast(product.title)
     };
 
     if (status === STATUSES.LOADING) {
@@ -43,6 +46,7 @@ const Products = () => {
                     </button>
                 </div>
             ))}
+            <ToastContainer/>
         </div>
     );
 };
