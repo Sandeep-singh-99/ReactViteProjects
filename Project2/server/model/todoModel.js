@@ -23,7 +23,7 @@ todoModel.methods.generateToken = function () {
             content: this.content,
             date: this.date
         };
-        const token = jwt.sign(payload, process.env.JSONWEBTOKEN, { expiresIn: '30m' });
+        const token = jwt.sign(payload, process.env.JSONWEBTOKEN, { expiresIn: '30d' });
         return token;
     } catch (error) {
         console.error('Error generating token:', error);
