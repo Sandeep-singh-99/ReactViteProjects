@@ -80,8 +80,8 @@ function Home() {
           <div className="pb-10"></div>
           <div className="space-y-10">
                 {todo.map(todos => (
-                   <div className="">
-                     <li key={todos._id} className="bg-white px-5 py-5">
+                   <div key={todo._id} className="">
+                     <li  className="bg-white px-5 py-5">
                         <p className='text-black'>{todos.content}</p>
                     </li>
                    </div>
