@@ -11,6 +11,8 @@ function App() {
     axios.get('http://localhost:5000/images')
       .then(response => {
         setImageUrl(response.data);
+        console.log(response.data);
+        
       })
       .catch(error => {
         console.error('Error fetching images:', error);
