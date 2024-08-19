@@ -14,6 +14,8 @@ import AddBlog from "./Page/AddBlog";
 import View from "./Page/View";
 import Profile from "./Page/Profile";
 
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,7 +31,7 @@ const router = createBrowserRouter(
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </Provider>
 );

@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
     <Header/>
-    <div className='mx-10'>
+    <div className='pt-20'>
       <Outlet/>
     </div>
     </>
