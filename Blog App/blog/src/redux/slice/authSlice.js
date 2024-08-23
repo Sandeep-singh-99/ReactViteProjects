@@ -48,7 +48,7 @@ const authSlice = createSlice({
         },
         setCredentials: (state, action) => {
             state.isLoading = true
-            state.user = action.payload
+            state.data = action.payload
             saveUser(action.payload)
         }
     },
@@ -56,7 +56,7 @@ const authSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(Registration1.fulfilled, (state, action) => {
             state.isLoading = false
-            state.user = action.payload 
+            state.data = action.payload 
             saveUser(action.payload.data)
         })
 
@@ -71,7 +71,7 @@ const authSlice = createSlice({
 
         builder.addCase(login.fulfilled, (state, action) => {
             state.isLoading = false
-            state.user = action.payload
+            state.data = action.payload
             saveUser(action.payload.data)
         })
 
