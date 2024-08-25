@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import authSlice, { setCredentials } from "./slice/authSlice";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
+import blogSlice from "./slice/blogSlice";
 
 const token = localStorage.getItem("token");
 const preloadedState = token
@@ -14,7 +15,8 @@ const preloadedState = token
   }
 
   const rootReducer = combineReducers({
-    auth: persistReducer(persistConfig, authSlice)
+    auth: persistReducer(persistConfig, authSlice),
+    blog: persistReducer(persistConfig, blogSlice)
   })
 
 export const store = configureStore({

@@ -6,8 +6,6 @@ const addBlog = async (req, res) => {
 
         const blog = await Blog.create({title, content, image, author: req.user.id})
 
-        await blog.save()
-
         res.status(200).json({
             message: "Blog created successfully",
             success: true,
