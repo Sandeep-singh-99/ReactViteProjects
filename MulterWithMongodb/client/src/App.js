@@ -71,7 +71,7 @@ function App() {
         <div style={styles.gallery}>
           {images.map((file) => (
             <>
-              <h1>{file.size}</h1>
+              {/* <h1>{file.size}</h1> */}
               <img
                 key={file._id}
                 src={`http://localhost:5000/uploads/${file.filename}`}
