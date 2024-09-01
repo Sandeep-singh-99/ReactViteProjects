@@ -1,11 +1,11 @@
 # React Project Exercise
 
 ## Table of Contents
-- [Simple ToDo](#todoapp)
-- [Multer With MongoDB](#multerwithmongodb)
+- [SimpleToDo](#todoapp)
+- [MulterWithMongoDB](#multerwithmongodb)
 
 
-## Simple ToDo 
+## SimpleToDo 
 This is simple mern todo project.
 * In this project using CRUD Operation
 1. React
@@ -16,7 +16,7 @@ This is simple mern todo project.
 ![Screenshot](./ToDoList/todo.png)
 ![Screenshot](./ToDoList/todolist.png)
 
-## Multer With MongoDB
+## MulterWithMongoDB
 In this project, I learn how to use Multer or Multer with MongoDB
 
 How to Upload image or Get image.
