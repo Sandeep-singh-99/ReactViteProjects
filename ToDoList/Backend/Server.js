@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const port = 3000
+const port = 5000
 const cors = require("cors")
 const router = require("./Router/todo_router")
 const ConnectDB = require("./Utils/db")

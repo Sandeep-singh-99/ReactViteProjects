@@ -1,5 +1,5 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import ToDo from './Components/AddToDo';
+import ToDo from './Page/ToDo';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       </h1>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<ToDo/>}></Route>
+        <Route path='/' element={ <ToDo/> }></Route>
       </Routes>
       </BrowserRouter>
     </div>

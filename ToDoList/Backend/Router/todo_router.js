@@ -8,9 +8,9 @@ router.route("/getToDoList").get(todoController.getToDoList)
 
 router.route("/addToDoList").post(todoController.addToDoList)
 
-router.route("/updateToDoList").put(todoController.updateToDoList)
+router.route("/updateToDoList/:id").put(todoController.updateToDoList)
 
-router.route("/deleteToDoList").delete(todoController.deleteToDoList)
+router.route("/deleteToDoList/:id").delete(todoController.deleteToDoList)
 
 module.exports = router
 

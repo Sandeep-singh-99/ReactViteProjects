@@ -10,38 +10,55 @@ const home = async (req, res) => {
 
 const addToDoList = async (req, res) => {
     try {
-        const todo = await ToDoModel.create({
-            task: req.body.task,
-            status: req.body.status,
-            deadline: req.body.deadline,
-        });
-        res.json(todo);
+        const { task, status, deadline } = req.body;
+
+        const todo = await ToDoModel.create({ task, status, deadline })
+
+        res.status(200).json({
+            message: "Todo created successfully",
+            success: true,
+            data: todo
+        })
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json({
+            message: err.message,
+            success: false
+        });
     }
 };
 
 const getToDoList = async (req, res) => {
     try {
-        const todolist = await ToDoModel.find({});
-        res.json(todolist);
+        const todolist = await ToDoModel.find({})
+        res.status(200).json({
+            message: "Todo fetched successfully",
+            success: true,
+            data: todolist
+        })
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json({
+            message: err.message,
+            success: false
+        });
     }
 };
 
 const updateToDoList = async (req, res) => {
     try {
         const { id } = req.params;
-        const updateData = {
-            task: req.body.task,
-            status: req.body.status,
-            deadline: req.body.deadline,
-        };
-        const todo = await ToDoModel.findByIdAndUpdate(id, updateData, { new: true });
-        res.json(todo);
-    } catch (err) {
-        res.status(500).json(err);
+        const { task, status, deadline } = req.body;
+        const todo = await ToDoModel.findByIdAndUpdate(id, { task, status, deadline });
+
+        res.status(200).json({
+            message: "Todo updated successfully",
+            success: true,
+            data: todo
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: error.message,
+            success: false
+        })
     }
 };
 
@@ -49,9 +66,16 @@ const deleteToDoList = async (req, res) => {
     try {
         const { id } = req.params;
         const todo = await ToDoModel.findByIdAndDelete(id);
-        res.json(todo);
-    } catch (err) {
-        res.status(500).json(err);
+        res.status(200).json({
+            message: "Todo deleted successfully",
+            success: true,
+            data: todo
+        })
+    } catch (error) {
+        res.status(501).json({
+            message: error.message,
+            success: false
+        })
     }
 };
 
