@@ -4,6 +4,10 @@
 
 - [SimpleToDo](#todoapp)
 - [MulterWithMongoDB](#multerwithmongodb)
+- [TaskManager](#taskmanager)
+- [PasswordGenerator](#passwordgenerator)
+- [LearnReactRedux](#learnreactredux)
+- [NewsApp](#newsapp)
 
 ## SimpleToDo
 
@@ -28,7 +32,7 @@ How to Upload image or Get image.
 ![Screenshot](./MulterWithMongodb/imageupload.png)
 ![Screenshot](./MulterWithMongodb/img1.png)
 
-## Task Manager
+## TaskManager
 
 In this project, I learn how to use Task Manager.
 
@@ -36,10 +40,10 @@ In this project, I learn how to use Task Manager.
 ![Screenshot](./Task%20Manager/t2.png)
 ![Screenshot](./Task%20Manager/t3.png)
 
-## Password Generator 
+## PasswordGenerator 
 ![Screenshot](./passwordGenerator/Screenshot%202024-09-23%20205658.png)
 
-## Learn React Redux
+## LearnReactRedux
 How to manage state in React.
 
 ![Screenshot](./Redux-Learn/Screenshot%202024-09-23%20205449.png)
@@ -48,7 +52,7 @@ How to manage state in React.
 
 ![Screenshot](./Redux-Learn/Screenshot%202024-09-23%20205513.png)
 
-## News App
+## NewsApp
 ![Screenshot](./News-App/public/assets/Screenshot%202024-09-06%20183021.png)
 
 # JWT
