@@ -48,6 +48,9 @@ How to manage state in React.
 
 ![Screenshot](./Redux-Learn/Screenshot%202024-09-23%20205513.png)
 
+## News App
+![Screenshot](./News-App/public/assets/Screenshot%202024-09-06%20183021.png)
+
 # JWT
 
 **JSON WEB TOKEN (JWT)** are an open standard (RFC 7519) for securely transmitting information between parties as a JSON object.
