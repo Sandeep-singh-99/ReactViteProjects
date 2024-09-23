@@ -28,6 +28,26 @@ How to Upload image or Get image.
 ![Screenshot](./MulterWithMongodb/imageupload.png)
 ![Screenshot](./MulterWithMongodb/img1.png)
 
+## Task Manager
+
+In this project, I learn how to use Task Manager.
+
+![Screenshot](./Task%20Manager/t1.png)
+![Screenshot](./Task%20Manager/t2.png)
+![Screenshot](./Task%20Manager/t3.png)
+
+## Password Generator 
+![Screenshot](./passwordGenerator/Screenshot%202024-09-23%20205658.png)
+
+## Learn React Redux
+How to manage state in React.
+
+![Screenshot](./Redux-Learn/Screenshot%202024-09-23%20205449.png)
+
+![Screenshot](./Redux-Learn/Screenshot%202024-09-23%20205502.png)
+
+![Screenshot](./Redux-Learn/Screenshot%202024-09-23%20205513.png)
+
 # JWT
 
 **JSON WEB TOKEN (JWT)** are an open standard (RFC 7519) for securely transmitting information between parties as a JSON object.
