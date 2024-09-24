@@ -60,7 +60,7 @@ How to manage state in React.
 **JSON WEB TOKEN (JWT)** are an open standard (RFC 7519) for securely transmitting information between parties as a JSON object.
 This information can be verified and trusted because it has digitally signed. JWTs are commonly used for authentication and informatin exchange.
 
-## Structure of a JWT
+### Structure of a JWT
 
 A JWT consists of three parts
 
@@ -86,7 +86,7 @@ A JWT consists of three parts
 }
 ```
 
-## USE Cases
+### USE Cases
 
 * **Authentication**: After a users logs in, a JWT can be generated and sent to the client. The client can then include this token in the header of subsequent requests to ensure to access protocted routes.
 
@@ -97,7 +97,7 @@ A JWT consists of three parts
 
 **HTTP cookies** are small pieces of data sent from a website and stored on the user's computer by the user’s web browser while the user is browsing. They are designed to be a reliable mechanism for websites to remember stateful information or to record the user’s browsing activity.
 
-## Key Points about Cookies
+### Key Points about Cookies
 
 1. **Purpose**: Cookies are used for various purposes, such as session management, personalization, and tracking.
 
@@ -121,16 +121,60 @@ A JWT consists of three parts
    * **Secure**: Indicates if the cookie should only be transmitted over secure protocols.
    * **HttpOnly**: Indicates if the cookie should not be accessible via JavaScript.
 
-## Example
+### Example
 Here's an example of setting a cookie in javascript:
 
 ```javascript
 document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
 ```
 
-## Use Cases
+### Use Cases
   * **Session Management**:  Keeping users logged in as they navigate through different pages.
 
   * **Personalization**: Storing user preferences and settings.
 
   * **Tracking**: Monitoring user behavior for analytics and advertising purposes.
+
+## Session
+
+In the context of web development, a **session** typically refers to a way to store information (in variables) to be used across multiple pages. Unlike cookies, the data is not stored on the user’s computer but on the server.
+
+
+### Key Points about Session
+
+1. **Session Management**: Sessions are used to manage user state and data across different pages of a web application. This is crucial for functionalities like user authentication.
+
+2. **Storage**: Session data is stored on the server, and a session ID is stored in a cookie on the client-side. This ID is sent with each request to the server to retrieve the session data.
+
+3. **Security**: Sessions are generally more secure than cookies because the data is stored on the server. However, it’s important to secure the session ID to prevent session hijacking.
+
+4. **Libraries and Tools**: In Node.js, you can use libraries like `express-session` to manage sessions.
+
+```javascript
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+app.use(session({
+  secret: 'your_secret_key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
+
+app.get('/', (req, res) => {
+  if (req.session.views) {
+    req.session.views++;
+    res.send(`Number of views: ${req.session.views}`);
+  } else {
+    req.session.views = 1;
+    res.send('Welcome to the session demo. Refresh!');
+  }
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+```
