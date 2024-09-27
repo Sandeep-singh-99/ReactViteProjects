@@ -55,6 +55,12 @@ How to manage state in React.
 ## NewsApp
 ![Screenshot](./News-App/public/assets/Screenshot%202024-09-06%20183021.png)
 
+## NextJs CRUD App
+
+![Screenshot](./nextjs_crud_app/Screenshot%202024-09-27%20205508.png)
+![Screenshot](./nextjs_crud_app/Screenshot%202024-09-27%20205515.png)
+![Screenshot](./nextjs_crud_app/Screenshot%202024-09-27%20205523.png)
+
 # JWT
 
 **JSON WEB TOKEN (JWT)** are an open standard (RFC 7519) for securely transmitting information between parties as a JSON object.
