@@ -8,6 +8,7 @@
 - [PasswordGenerator](#passwordgenerator)
 - [LearnReactRedux](#learnreactredux)
 - [NewsApp](#newsapp)
+- [Search Functionality](#searchfunctionality)
 
 ## SimpleToDo
 
@@ -60,6 +61,9 @@ How to manage state in React.
 ![Screenshot](./nextjs_crud_app/Screenshot%202024-09-27%20205508.png)
 ![Screenshot](./nextjs_crud_app/Screenshot%202024-09-27%20205515.png)
 ![Screenshot](./nextjs_crud_app/Screenshot%202024-09-27%20205523.png)
+
+## SearchFunctionality
+![Screenshot](./Search%20Function/search.png)
 
 # JWT
 
