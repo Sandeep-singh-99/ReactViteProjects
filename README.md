@@ -192,3 +192,15 @@ app.listen(3000, () => {
 });
 
 ```
+
+## Access Token 
+
+```
+An access token is a short-lived credential that grants temporary access to protected resources.
+```
+
+## Refresh Token
+
+```
+A refresh token is a credential used to obtain new access tokens without requiring the user to re-authenticate.
+```
