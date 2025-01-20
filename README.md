@@ -76,6 +76,10 @@ How to manage state in React.
 ### useState Hook
 ![screenshot](./react-hook/screenshot/Screenshot_20-1-2025_143851_localhost.jpeg)
 
+### useEffect Hook
+![Screenshot](./react-hook/screenshot/Screenshot_20-1-2025_152012_localhost.jpeg)
+
+
 # JWT
 
 **JSON WEB TOKEN (JWT)** are an open standard (RFC 7519) for securely transmitting information between parties as a JSON object.
