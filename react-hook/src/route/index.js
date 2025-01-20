@@ -14,11 +14,11 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: "/hook1",
+                path: "/useState",
                 element: <Hook1/>
             },
             {
-                path: "/hook2",
+                path: "/useEffect",
                 element: <Hook2/>
             }
         ]

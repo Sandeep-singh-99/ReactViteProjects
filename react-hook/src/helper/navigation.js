@@ -1,6 +1,6 @@
 const Navigation = [
-    { title:"UseState",  navigate:"/hook1" },
-    { title:"UseEffect",  navigate:"../screen/UseEffect" },
+    { title:"UseState",  navigate:"/useState" },
+    { title:"UseEffect",  navigate:"../useEffect" },
     { title:"UseContext",  navigate:"../screen/UseContext" },
     { title:"UseReducer",  navigate:"../screen/UseReducer" },
     {title:"UseMemo", navigate:"../screen/UseMemo"},

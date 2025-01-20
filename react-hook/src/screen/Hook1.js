@@ -7,7 +7,7 @@ function Hook1() {
     <div>
       <div className="gap-5 flex flex-col">
         <h1 className="text-3xl text-gray-300  font-bold">
-          UseState
+          useState
         </h1>
         <h2 className="text-white text-2xl">
           useState is a React Hook that lets you add a{" "}
