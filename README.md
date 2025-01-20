@@ -74,11 +74,11 @@ How to manage state in React.
 ![Screenshot](./react-hook/screenshot/Screenshot_20-1-2025_143824_localhost.jpeg)
 
 ### useState Hook
-![screenshot](./react-hook/screenshot/Screenshot_20-1-2025_143851_localhost.jpeg)
+![Screenshot](./react-hook/screenshot/Screenshot_20-1-2025_15392_localhost.jpeg)
+
 
 ### useEffect Hook
-![Screenshot](./react-hook/screenshot/Screenshot_20-1-2025_152012_localhost.jpeg)
-
+![Screenshot](./react-hook/screenshot/Screenshot_20-1-2025_153921_localhost.jpeg)
 
 # JWT
 

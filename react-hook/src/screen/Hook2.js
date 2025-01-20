@@ -9,10 +9,10 @@ function Hook2() {
         <h1 className="text-3xl text-gray-300  font-bold">useEffect</h1>
 
         <h2 className="text-white text-2xl">
-          useEffect is a React Hook that lets you{" "}
-          <span className="text-blue-600 ">
-            synchronize a component with an external system.
-          </span>
+          The <span className="text-blue-500">useEffect</span> hook is another essential part of React, used for
+          performing side effects in functional components. Side effects can
+          include data fetching, subscriptions, or directly interacting with the
+          DOM.
         </h2>
       </div>
 
