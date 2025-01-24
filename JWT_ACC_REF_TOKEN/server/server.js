@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import StudentModel from "./models/Student.js";
 
 const app = express();
-const PORT = 5000;
+const PORT = 5001;
 
 app.use(
   cors({
@@ -62,7 +62,8 @@ app.post("/login", async (req, res) => {
 
 const verifyUser = async (req, res, next) => {
   const accessToken = req.cookies.accessToken;
-
+  console.log("Req cookies", req.cookies);
+  
   if (!accessToken) {
     const renewed = await renewToken(req, res);
     if (renewed) {
