@@ -69,6 +69,10 @@ How to manage state in React.
 ## Yourlogo
 ![Screenshot](./reactRouter/Screenshot_29-11-2024_171451_localhost.jpeg)
 
+## Password Hide and Show
+![Screenshot](./PasswordHide/Screenshot%202025-01-25%20224859.png)
+![Screenshot](./PasswordHide/Screenshot%202025-01-25%20224907.png)
+
 ## React Hook
 
 ![Screenshot](./react-hook/screenshot/Screenshot_20-1-2025_143824_localhost.jpeg)
