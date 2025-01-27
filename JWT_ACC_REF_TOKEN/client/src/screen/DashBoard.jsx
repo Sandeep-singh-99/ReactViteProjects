@@ -8,7 +8,7 @@ function DashBoard() {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/dashboard", {
+        const res = await axios.get("http://localhost:5001/auth/dashboard", {
           withCredentials: true,
         });
         if (res.data.valid) {
