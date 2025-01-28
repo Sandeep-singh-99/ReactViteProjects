@@ -73,6 +73,10 @@ How to manage state in React.
 ![Screenshot](./PasswordHide/Screenshot%202025-01-25%20224859.png)
 ![Screenshot](./PasswordHide/Screenshot%202025-01-25%20224907.png)
 
+## Zod
+
+![Screenshot](./Zod%20App/Screenshot_28-1-2025_185010_localhost.jpeg)
+
 ## React Hook
 
 ![Screenshot](./react-hook/screenshot/Screenshot_20-1-2025_143824_localhost.jpeg)
