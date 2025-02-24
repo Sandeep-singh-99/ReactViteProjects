@@ -1,8 +1,10 @@
 import React from "react";
 
+export const revalidate = 60;
+
 async function getTodos() {
   const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
-    // cache: "force-cache", // ✅ Forces SSG (data is cached at build time)
+    cache: "force-cache", // ✅ Forces SSG (data is cached at build time)
   });
 
   if (!response.ok) {
