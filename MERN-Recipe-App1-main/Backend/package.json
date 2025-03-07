@@ -1,7 +1,7 @@
 {
   "name": "Backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -15,6 +15,6 @@
     "mongoose": "^6.9.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.1.9"
   }
 }

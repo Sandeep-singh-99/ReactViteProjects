@@ -54,7 +54,7 @@ export const Home = () => {
         {recipes.map((recipe) => (
           <li
             key={recipe._id}
-            className="bg-gray-700 p-6 rounded-xl shadow-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
+            className="bg-gray-700 p-6 rounded-xl border-4 border-gray-800 shadow-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
           >
             <div className="flex flex-col items-center">
               <h2 className="text-2xl font-semibold text-white mb-4">{recipe.name}</h2>

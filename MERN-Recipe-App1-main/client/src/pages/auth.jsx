@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const Auth = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-      <div className="flex space-x-12 p-6 bg-white rounded-lg shadow-xl w-full max-w-4xl">
+      <div className="flex space-x-12 p-6 bg-white border-4 border-gray-800 rounded-lg shadow-xl w-full max-w-4xl">
         {/* Login Form */}
         <Login />
         {/* Register Form */}

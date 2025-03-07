@@ -56,13 +56,20 @@ export const CreateRecipe = () => {
 
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
-      <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Create Recipe</h2>
+      <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">
+        Create Recipe
+      </h2>
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto space-y-6"
+        className="bg-white border-4 border-gray-800 p-8 rounded-lg shadow-lg max-w-3xl mx-auto space-y-6"
       >
         <div>
-          <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
+          <label
+            htmlFor="name"
+            className="block text-lg font-medium text-gray-700"
+          >
+            Name
+          </label>
           <input
             type="text"
             id="name"
@@ -75,7 +82,12 @@ export const CreateRecipe = () => {
         </div>
 
         <div>
-          <label htmlFor="description" className="block text-lg font-medium text-gray-700">Description</label>
+          <label
+            htmlFor="description"
+            className="block text-lg font-medium text-gray-700"
+          >
+            Description
+          </label>
           <textarea
             id="description"
             name="description"
@@ -88,7 +100,12 @@ export const CreateRecipe = () => {
         </div>
 
         <div>
-          <label htmlFor="ingredients" className="block text-lg font-medium text-gray-700">Ingredients</label>
+          <label
+            htmlFor="ingredients"
+            className="block text-lg font-medium text-gray-700"
+          >
+            Ingredients
+          </label>
           {recipe.ingredients.map((ingredient, index) => (
             <div key={index} className="flex items-center mb-4">
               <input
@@ -111,7 +128,12 @@ export const CreateRecipe = () => {
         </div>
 
         <div>
-          <label htmlFor="instructions" className="block text-lg font-medium text-gray-700">Instructions</label>
+          <label
+            htmlFor="instructions"
+            className="block text-lg font-medium text-gray-700"
+          >
+            Instructions
+          </label>
           <textarea
             id="instructions"
             name="instructions"
@@ -124,7 +146,12 @@ export const CreateRecipe = () => {
         </div>
 
         <div>
-          <label htmlFor="imageUrl" className="block text-lg font-medium text-gray-700">Image URL</label>
+          <label
+            htmlFor="imageUrl"
+            className="block text-lg font-medium text-gray-700"
+          >
+            Image URL
+          </label>
           <input
             type="text"
             id="imageUrl"
@@ -137,7 +164,12 @@ export const CreateRecipe = () => {
         </div>
 
         <div>
-          <label htmlFor="cookingTime" className="block text-lg font-medium text-gray-700">Cooking Time (minutes)</label>
+          <label
+            htmlFor="cookingTime"
+            className="block text-lg font-medium text-gray-700"
+          >
+            Cooking Time (minutes)
+          </label>
           <input
             type="number"
             id="cookingTime"
@@ -149,10 +181,19 @@ export const CreateRecipe = () => {
           />
         </div>
 
+        {/* <div className="flex justify-center">
+          <button
+            type="submit"
+            className="px-6 py-3 bg-blue-600 border-4 border-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none"
+          >
+            Create Recipe
+          </button>
+        </div> */}
+
         <div className="flex justify-center">
           <button
             type="submit"
-            className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none"
+            className="px-6 py-3 bg-blue-600 border-b-4 border-r-4 border-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none"
           >
             Create Recipe
           </button>
