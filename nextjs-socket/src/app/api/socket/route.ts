@@ -18,7 +18,17 @@ export async function GET(req) {
                 console.log(`${socket.id} joined room ${userId}`);
             })
 
-            
+            socket.on("privateMessage", ({ to , message}) => {
+                io.to(to).emit("privateMessage", { from: socket.id, message });
+            })
+
+            socket.on("disconnect", () => {
+                console.log("Socket disconnected", socket.id);
+            })
         })
+    } else {
+        console.log("Socket.IO server already initialized");
     }
+
+    return response;
 }
