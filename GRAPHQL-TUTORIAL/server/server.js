@@ -7,7 +7,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 const morgan = require('morgan');
 
-const ConnectDB = require('./utils/db')
+const ConnectDB = require('./utils/db');
+const { addTodo, getTodos, getTodoById } = require('./controller/Todo.controller');
 
 const app = express();
 app.use(cors());
@@ -30,6 +31,16 @@ const server = new ApolloServer({
             password: 'password123'
           }
         ]
+      },
+      getTodos: getTodos,
+      getTodoById: async (_, { id }) => {
+        return await getTodoById(id);
+      }
+    },
+    Mutation: {
+      createTodo: async (_, { title }) => {
+        const todo = await addTodo(title);
+        return todo;
       }
     }
   },
