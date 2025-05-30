@@ -1,8 +1,27 @@
 import prisma from "../utils/db.js";
 
+//    include: {
+//                 post: {
+//                     select: {
+//                         title: true,
+//                         description: true,
+//                         CommentCount: true
+//                     }
+//                 }
+//             }
+
 export const getAllUsers = async (req, res) => {
     try {
-        const users = await prisma.user.findMany({})
+        const users = await prisma.user.findMany({
+            select: {
+                _count: {
+                    select: {
+                        post: true,
+                        comment: true
+                    }
+                }
+            }
+        })
 
         return res.status(200).json(users);
     } catch (error) {
