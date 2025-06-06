@@ -1,0 +1,38 @@
+.editor-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-group {
+  background: #f8f9fa;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.toolbar-stats {
+  margin-left: auto;
+}
+
+.editor-content {
+  min-height: 400px;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: border-color 0.2s ease;
+}
+
+.editor-content:hover {
+  border-color: #4d94ff;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
