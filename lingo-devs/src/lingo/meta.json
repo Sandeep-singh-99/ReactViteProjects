@@ -1,0 +1,41 @@
+{
+  "version": 0.1,
+  "files": {
+    "../app/page.tsx": {
+      "scopes": {
+        "1/declaration/body/1/argument/1": {
+          "type": "element",
+          "hash": "88591b3028f6e98bfe9e60c6eec67f1f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome to our multilingual website!"
+        },
+        "1/declaration/body/1/argument/3": {
+          "type": "element",
+          "hash": "129c471d7ceaaa3f941e744bbcbecbb8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This text is automatically translated using Gemini and Lingo.dev."
+        },
+        "1/declaration/body/1/argument/5": {
+          "type": "element",
+          "hash": "3dbdfdd2290e4e5cdbb390067f06e5d4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Click Me"
+        },
+        "1/declaration/body/1/argument/7": {
+          "type": "element",
+          "hash": "550bb318892d765754e4e0ad497bae33",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Clicked {count} times."
+        }
+      }
+    }
+  }
+}
